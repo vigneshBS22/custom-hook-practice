@@ -34,10 +34,12 @@ function App() {
   };
 
   return (
-    <div>
-      <div className='w-full text-center mx-auto'>HTML form</div>
-      <div className='w-full max-w-min mx-auto my-32'>
-        <form className='bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4'>
+    <div className='bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 h-screen'>
+      <div className='w-full text-center mx-auto pt-10 text-5xl font-extrabold text-white bg-clip-text'>
+        HTML form
+      </div>
+      <div className='max-w-sm mx-auto my-10'>
+        <form className='bg-white shadow-md rounded px-16 pt-6 pb-8 ml-10'>
           <div className='mb-4'>
             <label className='block text-gray-700 text-sm font-bold mb-2'>
               Name
@@ -45,12 +47,12 @@ function App() {
             <input
               id='name'
               type='text'
-              placeholder='John Doe'
+              placeholder='Vignesh'
               value={name.value}
               onChange={name.changeHandler}
               className='shadow appearance-none border rounded w-min py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
             />
-            {submitForm && <div>{name.error}</div>}
+            {submitForm && <div className='text-red-500'>{name.error}</div>}
           </div>
           <div className='mb-4'>
             <label className='block text-gray-700 text-sm font-bold mb-2'>
@@ -64,7 +66,7 @@ function App() {
               onChange={age.changeHandler}
               className='shadow appearance-none border rounded w-min py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
             />
-            {submitForm && <div>{age.error}</div>}
+            {submitForm && <div className='text-red-500'>{age.error}</div>}
           </div>
           <div className='mb-4'>
             <label className='block text-gray-700 text-sm font-bold mb-2'>
@@ -73,12 +75,12 @@ function App() {
             <input
               id='email'
               type='text'
-              placeholder='support@thetopgeek.com'
+              placeholder='username@email.com'
               value={email.value}
               onChange={email.changeHandler}
               className='shadow appearance-none border rounded w-min py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
             />
-            {submitForm && <div>{email.error}</div>}
+            {submitForm && <div className='text-red-500'>{email.error}</div>}
           </div>
           <div className='mb-4'>
             <label className='block text-gray-700 text-sm font-bold mb-2'>
@@ -92,7 +94,7 @@ function App() {
               onChange={password.changeHandler}
               className='shadow appearance-none border rounded w-min py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
             />
-            {submitForm && <div>{password.error}</div>}
+            {submitForm && <div className='text-red-500'>{password.error}</div>}
           </div>
           <div className='mb-4'>
             <label className='block text-gray-700 text-sm font-bold mb-2'>
@@ -107,7 +109,7 @@ function App() {
               className='shadow appearance-none border rounded w-min py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
             />
             {submitForm && (
-              <div>
+              <div className='text-red-500'>
                 {password.value !== retypePassword.value
                   ? 'password dont match'
                   : ''}
@@ -115,7 +117,10 @@ function App() {
             )}
           </div>
           <div>
-            <button className='mt-5 text-center ml-10' onClick={submit}>
+            <button
+              className='mt-5 text-center ml-4 text-gray-100 bg-purple-400 p-4 rounded-lg font-bold'
+              onClick={submit}
+            >
               Click to Validate
             </button>
           </div>
