@@ -39,7 +39,7 @@ function App() {
         HTML form
       </div>
       <div className='max-w-sm mx-auto my-10'>
-        <form className='bg-white shadow-md rounded px-16 pt-6 pb-8 ml-10'>
+        <form className='bg-white rounded px-16 pt-6 pb-8 ml-10 shadow-2xl'>
           <div className='mb-4'>
             <label className='block text-gray-700 text-sm font-bold mb-2'>
               Name
